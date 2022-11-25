@@ -46,16 +46,8 @@ public static class Product implements Actions{
 
 	//Administrative Privilege Methods
 	public void Admin_Menu() {
-            System.out.println("\t ****JIMMA UNIVERSITY****");
-            System.out.println("\t JIMMA INISTITUTION OF TECHNOLOGY*");
-            System.out.println("\t DEPARTMENT OF SOFTWARE ENGINEERING FIRST BATCH AND SECOND YEAR");
             System.out.println("\t SUPER MARKET MANAGEMENT SYSTEM PROJECT");
-            System.out.println("\t NAME OF MEMBERS  \t ID NUMBERS");
-            System.out.println("\t Yemisrach Tekabe  \t RU0859/10-0");
-            System.out.println("\t Mahfuz Abdukerim \t RU0761/10-0 ");
-            System.out.println("\t Worineh Wosena \t RU0854/10-0");
-            System.out.println("\t Nuguse Asfe      \tRu0794/10-0");
-            System.out.println("\t Mohamednur Mengesha \t RU0778/10-0");           
+           
 		System.out.println("\n\t        Admin Menu");
 		System.out.println("\t ------------------------");
 		System.out.println("\t| 1) Store Product       |");
