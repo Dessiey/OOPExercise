@@ -1,0 +1,335 @@
+ package project;
+public class Project {
+    void calculateArea(double h,double w){
+        System.out.println("double double:"+(h*w));
+    }
+    void calculateArea(int h,double w){
+        System.out.println("int double:"+(h*w));   
+    }
+    void calculateArea(double h,int w){
+       System.out.println("double int:"+(h*w));  
+    }
+    void calculateARea(int h,int w){
+        System.out.println("int int:"+(h*w));
+    }
+    void calculateArea(int h){
+        System.out.println("int:"+(h*h));
+    }
+    void calculateArea(){
+        System.out.println("parameterless");
+    }
+     public static void main(String[] args) {
+         ol o=new ol();
+         o.calculateArea(5.2,4.9);
+         o.calculateArea(5,4.9);
+         o.calculateArea(5.2,4);
+         o.calculateArea(5,4);
+         o.calculateArea(5);
+         o.calculateArea(); 
+    }
+    
+}
+
+
+//2. Overloading by changing number of arguments
+class MethodOverloading {
+    private static void display(int a){
+        System.out.println("Arguments: " + a);
+    }
+
+    private static void display(int a, int b){
+        System.out.println("Arguments: " + a + " and " + b);
+    }
+
+    public static void main(String[] args) {
+        display(1);
+        display(1, 4);
+    }
+}
+
+
+
+
+3. /Overloading by changing number of arguments
+class MethodOverloading {
+    private static void display(int a){
+        System.out.println("Arguments: " + a);
+    }
+
+    private static void display(int a, int b){
+        System.out.println("Arguments: " + a + " and " + b);
+    }
+
+    public static void main(String[] args) {
+        display(1);
+        display(1, 4);
+    }
+}
+// By changing the datatype of parameters
+
+4. class MethodOverloading2 {
+    // this method accepts int
+    private static void display(int a){
+        System.out.println("Got Integer data.");
+    }
+    // this method  accepts String object
+    private static void display(String a){
+        System.out.println("Got String object.");
+    }
+    public static void main(String[] args) {
+        display(1);
+        display("Hello");
+    }
+}
+
+
+
+5. public class Palindrome {
+        public static void main(String[] args) {
+            int num = 121, reversedInteger = 0, remainder, originalInteger;
+            originalInteger = num;
+            // reversed integer is stored in variable 
+            while( num != 0 )
+            {
+                remainder = num % 10;
+                reversedInteger = reversedInteger * 10 + remainder;
+                num  /= 10;
+            }
+            // palindrome if orignalInteger and reversedInteger are equal
+            if (originalInteger == reversedInteger)
+                System.out.println(originalInteger + " is a palindrome.");
+            else
+                System.out.println(originalInteger + " is not a palindrome.");
+        }
+    
+
+
+ 6. import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.Map;
+public class CollandExcepDemo{
+    
+ public static void main(String[] args) {
+     Collection col=new ArrayList ();
+             col.add("Book1");
+             col.add ("Book2");
+            col.add ("Book3");
+            col.add ("123");
+            System.out.println (col);
+            col.remove("book1");
+            System.out.println (col);
+            LinkedList <String>names=new LinkedList <>();
+            names.add("xxx");
+            names.add("yyy");
+ }
+
+
+7. import java.util.Scanner;
+
+public class PasswordChecker {
+    
+public static final int PASSWORD_LENGTH = 8;
+
+public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+        System.out.print(
+                "1. A password must have at least eight characters.\n" +
+                "2. A password consists of only letters and digits.\n" +
+                "3. A password must contain at least two digits \n" +
+                "Input a password (You are agreeing to the above Terms and Conditions.): ");
+        String s = input.nextLine();
+
+        if (is_Valid_Password(s)) {
+            System.out.println("Password is valid: " + s);
+        } else {
+            System.out.println("Not a valid password: " + s);
+        }
+
+    }
+
+   8.  public static boolean is_Valid_Password(String password) {
+
+        if (password.length() < PASSWORD_LENGTH) return false;
+
+        int charCount = 0;
+        int numCount = 0;
+        for (int i = 0; i < password.length(); i++) {
+
+            char ch = password.charAt(i);
+
+            if (is_Numeric(ch)) numCount++;
+            else if (is_Letter(ch)) charCount++;
+            else return false;
+        }
+
+
+        return (charCount >= 2 && numCount >= 2);
+    }
+
+    public static boolean is_Letter(char ch) {
+        ch = Character.toUpperCase(ch);
+        return (ch >= 'A' && ch <= 'Z');
+    }
+
+
+    public static boolean is_Numeric(char ch) {
+
+        return (ch >= '0' && ch <= '9');
+    }
+
+}
+
+9. public class Main {
+   static int  sumvarargs(int... intArrays) {
+      int sum, i;
+      sum = 0;
+      for(i = 0; i< intArrays.length; i++) {
+         sum += intArrays[i];
+      }
+      return(sum);
+   }
+   public static void main(String args[]) {
+      int sum = 0;
+      sum = sumvarargs(new int[]{10,12,33});
+      System.out.println("The sum of the numbers is: " + sum);
+   }
+}
+
+10.  package employee;
+
+public class myclass {
+String name;
+int id;
+static final double pi=3.14;
+public int add (int x,int y){
+    int sum=0;
+    sum=x+y;
+    return sum;
+    
+}
+double dividetownumber (double x, double y){
+    return x/y;
+}
+ public static void main(String[] args) {
+    for (int i=0;i<10;i++){
+        System.out.println(i);
+    }
+    //dowhli
+    int i=0;
+            do{
+                System.out.println(i);
+                i++;
+            }while(i<10);
+            int x=5;
+             System.out.println(x++);
+              System.out.println(++x);
+               System.out.println(x--);
+                System.out.println(--x);
+                
+ }
+
+
+11. classclassname {
+datatype instance-variable1;datatype instance-variable2;
+// ...
+datatype instance-variableN;
+returntypemethodname1(parameter-list) {
+// body of method
+}
+returntypemethodname2(parameter-list) {
+// body of method
+}
+// ...
+returntype methodnameN(parameter-list) {
+// body of method
+}
+}
+
+
+12. Nested Classes
+public class OuterClass{
+public void outerClassMethod(){
+System.out.println("Outer classmethod");
+}
+public void common(){
+System.out.println("Common from outerclass");
+}
+public class InnerClass{  public void common(){
+System.out.println("Common from innerclass");
+}
+public void innerClassMethod() {  System.out.println("Inner classmethod");
+this.common();// calling the common of the inner class  OuterClass.this.common();// calling the common of the outerclass
+}
+}
+public static void main(String[] args) 
+{  OuterClasso = new OuterClass(); 
+ o.common();  o.outerClassMethod();
+OuterClass.InnerClassi = o.new InnerClass();
+  i.common();
+i.innerClassMethod();
+}
+}
+
+
+13. Inheritance 
+Create a superclass.  classA{
+int i,j;
+void showij(){
+System.out.println("i and j: "+ i + ""+j);
+}
+}
+//CreateasubclassbyextendingclassA.  classB extends A{
+intk;
+void showk() {  System.out.println("k: " +k);
+}
+void sum(){
+System.out.println("i+j+k: " +(i+j+k));
+}
+}
+classSimpleInheritance{
+public static void main(String args[]) {  A superOb= newA();
+B subOb= newB();
+//Thesuperclassmaybeusedbyitself.
+superOb.i=10;
+superOb.j= 20;  System.out.println("superOb Contents:");  superOb.showij();
+System.out.println();
+/*Thesubclasshasaccesstoallpublic  members of its superclass.*/
+subOb.i=7;
+subOb.j=8;
+subOb.k=9;
+System.out.println(“subOb Contents : ");  subOb.showij();
+ subOb.showk();  System.out.println();
+System.out.println("Sum of i, j and k in  subOb:");
+subOb.sum();
+}
+}
+
+
+14. Interfaces
+interfaceAnimal{ public voideat();
+public voidtravel();
+}
+public class Mammal implements Animal{  publicnoOfLeg;
+public void eat(){  System.out.println("Mammaleats");
+}
+public void travel(){  System.out.println("Mammaltravels");
+}
+public void setNoOfLegs(int noOfLeg)
+{  this.noOfLeg = noOfLeg;  System.out.println(noOfLeg + “ no ofLegs");
+}
+public static void main(Stringargs[]){  Mammal m = new Mammal();  m.eat();
+m.travel();  m.setNoOfLegs(4);
+}
+}
+
+
+
+
+
+
+
+
+
