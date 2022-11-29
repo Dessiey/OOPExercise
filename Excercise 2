@@ -81,6 +81,7 @@ class MethodOverloading {
     public static void main(String[] args) {
         display(1);
         display("Hello");
+        display("Hello WOrld");
     }
 }
 
