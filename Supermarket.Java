@@ -48,7 +48,7 @@ public static class Product implements Actions{
 	public void Admin_Menu() {
             System.out.println("\t SUPER MARKET MANAGEMENT SYSTEM PROJECT");
            
-		System.out.println("\n\t        Admin Menu");
+		System.out.println("\n\t        Admin Menu choose 1");
 		System.out.println("\t ------------------------");
 		System.out.println("\t| 1) Store Product       |");
 		System.out.println("\t| 2) Modify Product      |");
