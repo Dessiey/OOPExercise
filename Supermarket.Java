@@ -6,6 +6,8 @@ import javax.swing.JOptionPane;
 public class SuperMarketManagementSystem {
     public interface Actions {
 	void Admin_Menu();
+	    	void DisplayInfo();
+
 	void Store_Product();
 	void Modify_Product();
 	void Display_All_Products();
