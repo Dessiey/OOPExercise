@@ -6,6 +6,8 @@ public class StudentD {
 	private String sex;
 	private String dept;
 	private int year;
+	StudentD(){
+	}
 	public  StudentD(String n,String id,int age, String sex,int yr,String dept)
 	{
 		name=n;
