@@ -1,0 +1,330 @@
+import java.util.Scanner;
+public class TestPalindrom1 {
+public static void main(String[] args)
+{
+Scanner console = new Scanner(System.in);
+
+int num;
+
+System.out.print(&quot;Enter a number: &quot;);
+num = console.nextInt();
+
+if(isPalindrom(num))
+{
+System.out.println(&quot;Number is palindrom&quot;);
+}
+else
+{
+System.out.println(&quot;Number is not palindrom&quot;);
+}
+}
+
+public static boolean isPalindrom(int number)
+{
+int temp = number;
+int remainder;
+int reverse = 0;
+
+while(temp &gt; 0)
+{
+remainder = temp % 10;
+temp = temp / 10;
+reverse = reverse * 10 + remainder;
+}
+
+return reverse == number;
+}
+}
+
+Q2.
+import java.util.Scanner;
+
+public class PasswordChecker {
+
+public static final int PASSWORD_LENGTH = 8;
+
+public static void main(String[] args) {
+
+Scanner input = new Scanner(System.in);
+System.out.print(
+&quot;1. A password must have at least eight characters.\n&quot; +
+&quot;2. A password consists of only letters and digits.\n&quot; +
+&quot;3. A password must contain at least two digits \n&quot; +
+&quot;Input a password (You are agreeing to the above Terms and Conditions.)&quot;);
+String s = input.nextLine();
+
+if (is_Valid_Password(s)) {
+System.out.println(&quot;Password is valid: &quot; + s);
+} else {
+System.out.println(&quot;Not a valid password: &quot; + s);
+}
+
+}
+
+public static boolean is_Valid_Password(String password) {
+
+if (password.length() &lt; PASSWORD_LENGTH) return false;
+
+int charCount = 0;
+int numCount = 0;
+for (int i = 0; i &lt; password.length(); i++) {
+
+char ch = password.charAt(i);
+
+if (is_Numeric(ch)) numCount++;
+else if (is_Letter(ch)) charCount++;
+else return false;
+}
+
+return (charCount &gt;= 2 &amp;&amp; numCount &gt;= 2);
+}
+
+public static boolean is_Letter(char ch) {
+ch = Character.toUpperCase(ch);
+
+return (ch &gt;= &#39;A&#39; &amp;&amp; ch &lt;= &#39;Z&#39;);
+}
+
+public static boolean is_Numeric(char ch) {
+
+return (ch &gt;= &#39;0&#39; &amp;&amp; ch &lt;= &#39;9&#39;);
+}
+
+}
+
+public class Main {
+static int sumvarargs(int... intArrays) {
+int sum, i;
+sum = 0;
+for(i = 0; i&lt; intArrays.length; i++) {
+sum += intArrays[i];
+}
+return(sum);
+}
+public static void main(String args[]) {
+int sum = 0;
+sum = sumvarargs(new int[]{10,12,33});
+System.out.println(&quot;The sum of the numbers is: &quot; + sum);
+}
+}
+Q5.
+public class StringArrays {
+public static void main(String[] args) {
+
+int[ ] aryNums = { 24, 6, 47, 35, 2, 14 };
+
+int i;
+int arrayTotal = 0;
+int average = 0;
+
+for (i=0; i &lt; aryNums.length; i++) {
+
+arrayTotal = arrayTotal + aryNums[ i ];
+
+}
+}
+}
+
+import java.util.Scanner;
+public class Ascending
+{
+public static void main(String[] args)
+{
+int n, temp;
+Scanner s = new Scanner(System.in);
+System.out.print(&quot;Enter no. of elements you want in array:&quot;);
+n = s.nextInt();
+int a[] = new int[n];
+System.out.println(&quot;Enter all the elements:&quot;);
+for (int i = 0; i &lt; n; i++)
+{
+a[i] = s.nextInt();
+}
+
+for (int i = 0; i &lt; n; i++)
+{
+for (int j = i + 1; j &lt; n; j++)
+{
+if (a[i] &gt; a[j])
+{
+temp = a[i];
+a[i] = a[j];
+a[j] = temp;
+}
+}
+}
+System.out.print(&quot;Ascending Order:&quot;);
+for (int i = 0; i &lt; n - 1; i++)
+{
+System.out.print(a[i] + &quot;,&quot;);
+}
+System.out.print(a[n - 1]);
+}
+}
+
+import java.util.Scanner;
+class arr16
+{
+public static void main(String args[])
+{Scanner sc = new Scanner(System.in);
+int i,j,row,col,sum=0;
+
+System.out.println(&quot;Enter the number of rows:&quot;);
+row = sc.nextInt();
+
+System.out.println(&quot;Enter the number of columns:&quot;);
+
+col = sc.nextInt();
+
+int[][] mat = new int[row][col];
+
+System.out.println(&quot;Enter the elements of the matrix&quot;) ;
+for(i=0;i&lt;row;i++)
+{ for(j=0;j&lt;col;j++)
+{ mat[i][j] = sc.nextInt();
+}
+}
+System.out.println(&quot;The elements of the matrix&quot;) ;
+
+for(i=0;i&lt;row;i++)
+{ for(j=0;j&lt;col;j++)
+{ System.out.print(mat[i][j]+&quot;\t&quot;);
+} System.out.println(&quot;&quot;);
+
+}for(i=0;i&lt;row;i++)
+{ for(j=0;j&lt;col;j++)
+{ if(i==j) //this condition checks for diagonal
+
+{sum = sum + mat[i][j];
+}
+}
+}
+
+System.out.printf(&quot;SUM of DIAGONAL elements of the matrix = &quot;+sum) ;
+}
+}
+
+Lab Exercise
+
+package employee;
+
+public class myclass {
+String name;
+int id;
+static final double pi=3.14;
+public int add (int x,int y){
+int sum=0;
+sum=x+y;
+return sum;
+
+}
+double dividetownumber (double x, double y){
+return x/y;
+}
+public static void main(String[] args) {
+for (int i=0;i&lt;10;i++){
+System.out.println(i);
+}
+//dowhli
+int i=0;
+do{
+System.out.println(i);
+i++;
+}while(i&lt;10);
+int x=5;
+System.out.println(x++);
+System.out.println(++x);
+System.out.println(x--);
+System.out.println(--x);
+}
+
+class Overloading{
+
+private static void display(int a){
+System.out.println(&quot;Arguments: &quot;+ a);
+}
+private static void display(int a,int b){
+System.out.println(&quot;Arguments: &quot;+ a +&quot; and &quot;+ b);
+}
+public static void main(String[]args){
+display(1);
+display(1,4);
+}
+}
+class Overloading2{
+private static void display(int a){
+System.out.println(&quot;Got Integer data.&quot;);
+}
+// this method accepts String object
+private static void display(String a){
+System.out.println(&quot;Got String object.&quot;);
+}
+public static void main(String[]args){
+display(1);
+display(&quot;Hello&quot;);
+}
+}
+
+package jit;
+
+class Employee{
+String emp_name;
+int salary;
+int getsalary() {
+return salary;
+
+}
+void displayempDetail() {
+System.out.println(&quot;Detail of employee&quot;);
+
+}
+}
+public class Jit {
+
+public static void main(String[] args) {
+
+}
+
+}
+
+Last Lab Exercise Demonstrate:
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.Map;
+public class CollandExcepDemo{
+
+public static void main(String[] args) {
+Collection col=new ArrayList ();
+col.add(&quot;Book1&quot;);
+col.add (&quot;Book2&quot;);
+col.add (&quot;Book3&quot;);
+col.add (&quot;123&quot;);
+System.out.println (col);
+col.remove(&quot;book1&quot;);
+System.out.println (col);
+LinkedList &lt;String&gt;names=new LinkedList &lt;&gt;();
+names.add(&quot;xxx&quot;);
+names.add(&quot;yyy&quot;);
+names.add(&quot;kkk&quot;);
+Map&lt;Integer,String&gt;nameswithid = new HashMap&lt;Integer,String&gt;();
+nameswithid.put(123, &quot;AAAA&quot;);
+nameswithid.put(124, &quot;BBBB&quot;);
+nameswithid.put(125, &quot;CCCC&quot;);
+
+try{
+int x=5;
+int y=10;
+
+int r=x/y;
+}
+catch(Exception e){
+System.out.println(&quot;divistion by 0 is impossible &quot;);
+}
+finally{
+System.out.println(&quot;divistion by 0 is impossible &quot;);
+
+}
+}
