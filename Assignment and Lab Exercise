@@ -204,7 +204,7 @@ System.out.printf(&quot;SUM of DIAGONAL elements of the matrix = &quot;+sum) ;
 }
 }
 
-Lab Exercise
+//Lab Exercise
 
 package employee;
 
