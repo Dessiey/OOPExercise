@@ -3,6 +3,8 @@ public class BookD extends Object{
     private String bname;
     private String  bcode;
     private String bauthor;
+	    private String catelog;
+
 
 public BookD()
 {
